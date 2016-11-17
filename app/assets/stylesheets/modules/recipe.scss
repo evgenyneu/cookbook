@@ -1,0 +1,22 @@
+@import "variables";
+
+.Recipe {
+  border-bottom: 1px solid $shade60;
+  padding: $iiMarginNormal 0;
+
+  &:last-child  { border-bottom: none; }
+}
+
+.Recipe-name {
+  margin-top: $iiMarginNormal;
+  font-size: 1.5em;
+  color: $shade97;
+}
+
+.Recipe-property {
+  margin: 0;
+}
+
+.Recipe-propertyTitle {
+  color: $shade80;
+}

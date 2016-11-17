@@ -13,25 +13,26 @@
 
   <div class="field">
     <%= f.label :name %>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, class: 'Input Input-isWide' %>
   </div>
 
   <div class="field">
     <%= f.label :instructions %>
-    <%= f.text_area :instructions %>
+    <%= f.text_area :instructions, class: 'Input TextInput Input-isWide' %>
   </div>
 
   <div class="field">
     <%= f.label :cuisine %>
-    <%= f.text_field :cuisine %>
+    <%= f.text_field :cuisine, class: 'Input Input-isWide' %>
   </div>
 
   <div class="field">
     <%= f.label :cooking_time %>
-    <%= f.number_field :cooking_time %>
+    <%= f.number_field :cooking_time, class: 'Input' %>
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <br>
+    <%= f.submit class: 'Button' %>
   </div>
 <% end %>

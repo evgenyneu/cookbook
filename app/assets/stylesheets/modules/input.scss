@@ -1,7 +1,17 @@
 @import "variables";
 
 .Input {
+  color: $shade60;
   padding: $iiMarginSmall $iiMarginNormal;
-  border: 1px solid $shade100;
+  border: 1px solid $shade97;
   border-radius: $borderRadius;
+  width: 200px;
+}
+
+.Input-isWide {
+  width: 400px;
+}
+
+.TextInput {
+  height: 200px;
 }

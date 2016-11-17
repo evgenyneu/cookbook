@@ -1,3 +1,5 @@
+@import "variables";
+
 pre {
   background-color: #eee;
   padding: 10px;
@@ -20,38 +22,36 @@ div {
   }
 }
 
-#notice {
-  color: green;
-}
-
 .field_with_errors {
   padding: 2px;
-  background-color: red;
+  background-color: $errorBackgroundColor;
   display: table;
+  color: $shade100;
 }
 
 #error_explanation {
   width: 450px;
-  border: 2px solid red;
+  border: 2px solid $errorBackgroundColor;
   padding: 7px;
   padding-bottom: 0;
   margin-bottom: 20px;
-  background-color: #f0f0f0;
+  background-color: $shade97;
 
   h2 {
     text-align: left;
     font-weight: bold;
     padding: 5px 5px 5px 15px;
-    font-size: 12px;
+    font-size: 1.1em;
     margin: -7px;
     margin-bottom: 0;
-    background-color: #c00;
-    color: #fff;
+    background-color: $errorBackgroundColor;
+    color: $shade100;
   }
 
   ul li {
-    font-size: 12px;
+    font-size: 0.8em;
     list-style: square;
+    color: $shade50;
   }
 }
 

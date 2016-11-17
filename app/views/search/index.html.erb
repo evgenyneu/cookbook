@@ -10,16 +10,25 @@
   <%= submit_tag 'Search', name: nil, class: 'Button' %>
 <% end %>
 
-<% @recipes.each do |recipe| %>
-  <div class='Recipe'>
-    <h4><%= recipe.name %></h4>
-    <p>Cuisine: <%= recipe.cuisine %><p>
-    <p>Cooking time: <%= recipe.cooking_time %> min<p>
-    <p>Ingredients: <%= recipe.ingredients.pluck(:name).join(', ') %><p>
-    <p><%= recipe.instructions %><p>
-  </div>
-<% end %>
+<div class='isTextCentered'>
+  <% @recipes.each do |recipe| %>
+    <div class='Recipe'>
+      <h4 class='Recipe-name'><%= recipe.name %></h4>
+      <p class='Recipe-property'>
+        <span class='Recipe-propertyTitle'>Cuisine</span>: <%= recipe.cuisine %>
+      </p>
+      <p class='Recipe-property'>
+        <span class='Recipe-propertyTitle'>Cooking time</span>: <%= recipe.cooking_time %> min
+      </p>
+      <p class='Recipe-property'>
+        <span class='Recipe-propertyTitle'>Ingredients</span>: <%= recipe.ingredients.pluck(:name).join(', ') %>
+      </p>
+      <p><%= recipe.instructions %></p>
+    </div>
+  <% end %>
 
-<% if @recipes.empty? %>
-  <p>No recipes found</p>
-<% end %>
+  <% if @recipes.empty? %>
+    <br><br>
+    <h3>No recipes found</h3>
+  <% end %>
+</div>

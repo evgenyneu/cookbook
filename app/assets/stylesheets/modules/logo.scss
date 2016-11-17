@@ -1,0 +1,12 @@
+@import "variables";
+
+.Logo {
+  display: inline-block;
+  text-decoration: none;
+  color: $shade100;
+}
+
+a.Logo { color: $shade100; }
+a.Logo:visited { color: $shade100; }
+.Logo-title { font-size: 1.5em; }
+.Logo-image { width: 122px; }

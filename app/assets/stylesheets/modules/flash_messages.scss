@@ -1,0 +1,13 @@
+@import "variables";
+
+#notice, #error {
+  color: $shade100;
+  background-color: $noticeBackgroundColor;
+  font-size: 1.3em;
+  padding: $iiMarginNormal;
+  border-radius: $borderRadius;
+}
+
+#error {
+  background-color: $errorBackgroundColor;
+}

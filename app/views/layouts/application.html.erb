@@ -11,15 +11,22 @@
   <body>
     <div class='layout-outer'>
       <div class='layout-fixed'>
-        <%= link_to search_path, class: 'isTextCentered Head' do %>
-          <%= image_tag 'cookbook_logo.png', class: 'Head-logo' %>
-          <div class='Head-title'>Cookbook</div>
-        <% end %>
+        <div class='isTextCentered Head'>
+          <%= link_to 'Admin', recipes_path, class: 'Head-adminLink' %>
+          <%= link_to search_path, class: 'Logo' do %>
+            <%= image_tag 'cookbook_logo.png', class: 'Logo-image' %>
+            <div class='Logo-title'>Cookbook</div>
+          <% end %>
+        </div>
 
         <br>
 
         <% if flash[:error] %>
           <p id="error"><%= flash[:error] %></p>
+        <% end %>
+
+        <% if notice.present? %>
+          <p id="notice"><%= notice %></p>
         <% end %>
 
         <%= yield %>

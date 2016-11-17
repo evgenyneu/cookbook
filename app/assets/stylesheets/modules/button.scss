@@ -2,8 +2,12 @@
 
 .Button {
   background-color: $shade40;
-  color: $shade100;
+  color: $linkcolor;
   padding: $iiMarginSmall $iiMarginNormal;
-  border: 1px solid $shade100;
+  border: 1px solid $linkcolor;
   border-radius: $borderRadius;
+
+  &:hover {
+    background-color: $shade50;
+  }
 }

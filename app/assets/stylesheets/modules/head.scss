@@ -1,18 +1,10 @@
+@import "variables";
+
 .Head {
-  display: block;
-  text-decoration: none;
-  color: #fff;
-
+  position: relative;
 }
 
-a.Head {
-  color: #fff;
-}
-
-a.Head:visited {
-  color: #fff;
-}
-
-.Head-logo {
-  width: 100px;
+.Head-adminLink {
+  position: absolute;
+  right: $iiMarginSmall;
 }
