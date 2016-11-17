@@ -23,6 +23,9 @@
     <p>Cooking time: <%= recipe.cooking_time %> min<p>
     <p>Ingredients: <%= recipe.ingredients.pluck(:name).join(', ') %><p>
     <p><%= recipe.instructions %><p>
-
   </div>
+<% end %>
+
+<% if @recipes.empty? %>
+  <p>No recipes found</p>
 <% end %>

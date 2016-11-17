@@ -12,6 +12,6 @@ class SearchControllerTest < ActionDispatch::IntegrationTest
 
   test 'search by cuisine' do
     get search_url, params: { cuisine: 'Cuisine2' }
-    assert_equal 12, assigns(:recipes).count
+    assert_equal %w(Cuisine2), assigns(:recipes).pluck(:cuisine)
   end
 end
