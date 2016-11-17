@@ -2,8 +2,8 @@
 
 one:
   recipe: one
-  name: MyString
+  name: Ingredient1
 
 two:
   recipe: two
-  name: MyString
+  name: Ingredient2
