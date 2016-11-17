@@ -1,0 +1,7 @@
+@import "variables";
+
+.Input {
+  padding: $iiMarginSmall $iiMarginNormal;
+  border: 1px solid $shade100;
+  border-radius: $borderRadius;
+}

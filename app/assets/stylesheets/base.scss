@@ -1,0 +1,22 @@
+@import "variables";
+
+body {
+  padding: $iiMarginSmall;
+  font-family: Optima,Candara, Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  word-wrap: break-word;
+  color: $shade97;
+  background-color: $shade40;
+}
+
+a {
+  color: $linkcolor;
+
+  &:visited {
+    color: $linkcolor;
+  }
+
+  &:hover {
+    color: #fff;
+  }
+}

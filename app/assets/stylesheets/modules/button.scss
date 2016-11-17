@@ -1,0 +1,9 @@
+@import "variables";
+
+.Button {
+  background-color: $shade40;
+  color: $shade100;
+  padding: $iiMarginSmall $iiMarginNormal;
+  border: 1px solid $shade100;
+  border-radius: $borderRadius;
+}

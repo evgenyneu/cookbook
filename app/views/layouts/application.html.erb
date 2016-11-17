@@ -9,10 +9,21 @@
   </head>
 
   <body>
-    <% if flash[:error] %>
-      <p id="error"><%= flash[:error] %></p>
-    <% end %>
+    <div class='layout-outer'>
+      <div class='layout-fixed'>
+        <%= link_to search_path, class: 'isTextCentered Head' do %>
+          <%= image_tag 'cookbook_logo.png', class: 'Head-logo' %>
+          <div class='Head-title'>Cookbook</div>
+        <% end %>
 
-    <%= yield %>
+        <br>
+
+        <% if flash[:error] %>
+          <p id="error"><%= flash[:error] %></p>
+        <% end %>
+
+        <%= yield %>
+      </div>
+    </div>
   </body>
 </html>
