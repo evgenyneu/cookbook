@@ -20,7 +20,7 @@ class RecipesControllerTest < ActionDispatch::IntegrationTest
       post recipes_url, params: { recipe: { cooking_time: @recipe.cooking_time, cuisine: @recipe.cuisine, instructions: @recipe.instructions, name: @recipe.name } }
     end
 
-    assert_redirected_to recipe_url(Recipe.last)
+    assert_redirected_to edit_recipe_url(Recipe.last)
   end
 
   test "should show recipe" do
@@ -35,7 +35,7 @@ class RecipesControllerTest < ActionDispatch::IntegrationTest
 
   test "should update recipe" do
     patch recipe_url(@recipe), params: { recipe: { cooking_time: @recipe.cooking_time, cuisine: @recipe.cuisine, instructions: @recipe.instructions, name: @recipe.name } }
-    assert_redirected_to recipe_url(@recipe)
+    assert_redirected_to edit_recipe_url(@recipe)
   end
 
   test "should destroy recipe" do
