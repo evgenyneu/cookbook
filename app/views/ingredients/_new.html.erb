@@ -1,0 +1,3 @@
+<%= form_for([@recipe, Ingredient.new]) do |form| %>
+  New ingredient: <%= form.text_field :name %> <%= form.submit %>
+<% end %>
