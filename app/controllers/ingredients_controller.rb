@@ -5,7 +5,7 @@ class IngredientsController < ApplicationController
     @ingredient = @recipe.ingredients.new comments_params
 
     if @ingredient.save
-      redirect_to @recipe
+      redirect_to edit_recipe_path(@recipe)
     else
       error =
         if @ingredient.errors[:name].present?
@@ -14,13 +14,13 @@ class IngredientsController < ApplicationController
           'Error saving ingredient'
         end
 
-      redirect_to @recipe, flash: { error: error }
+      redirect_to edit_recipe_path(@recipe), flash: { error: error }
     end
   end
 
   def destroy
     Ingredient.find(params[:id]).destroy
-    redirect_to @recipe
+    redirect_to edit_recipe_path(@recipe)
   end
 
   private

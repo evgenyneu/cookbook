@@ -1,4 +1,6 @@
-<h1>Admin</h1>
+<% if @recipes.empty? %>
+  <h4>No recipes</h4>
+<% else %>
 
 <table>
   <thead>
@@ -18,14 +20,15 @@
         <td><%= truncate(recipe.instructions) %></td>
         <td><%= recipe.cuisine %></td>
         <td><%= recipe.cooking_time %></td>
-        <td><%= link_to 'Show', recipe %></td>
         <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>
-        <td><%= link_to 'Destroy', recipe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Delete', recipe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
+<% end %>
+
 <br>
 
-<%= link_to 'New Recipe', new_recipe_path %>
+<%= link_to 'Create a recipe', new_recipe_path, class: 'Button' %>

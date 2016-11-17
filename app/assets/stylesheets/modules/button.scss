@@ -6,8 +6,11 @@
   padding: $iiMarginSmall $iiMarginNormal;
   border: 1px solid $linkcolor;
   border-radius: $borderRadius;
+  display: inline-block;
+  text-decoration: none;
 
   &:hover {
     background-color: $shade50;
+    color: $linkcolor;
   }
 }

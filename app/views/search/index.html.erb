@@ -1,10 +1,10 @@
 <%= form_tag search_path, method: :get, class: 'isTextCentered' do %>
   <div class="field">
-    <%= text_field_tag :cuisine, params[:cuisine], placeholder: 'Cuisine', class: 'Input' %>
+    <%= text_field_tag :cuisine, params[:cuisine], placeholder: 'Cuisine', class: 'Input Input-isSmall' %>
   </div>
 
   <div class="field">
-    <%= text_field_tag :ingredient, params[:ingredient], placeholder: 'Ingredient', class: 'Input' %>
+    <%= text_field_tag :ingredient, params[:ingredient], placeholder: 'Ingredient', class: 'Input Input-isSmall' %>
   </div>
 
   <%= submit_tag 'Search', name: nil, class: 'Button' %>
